@@ -14,23 +14,6 @@ namespace YoutubeMp3V3
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string url = textBox1.Text;
-            string tur = Convert.ToString(comboBox1.SelectedItem);
-            tur = tur.ToLower();
-            if (string.IsNullOrEmpty(url) || string.IsNullOrEmpty(tur))
-            {
-                MessageBox.Show("Lutfen Gecerli Bir Link Giriniz Veya Bir Dosya Turu Seciniz");
-                return;
-            }
-            RunPythonaScript(url, tur);
-        }
         private void RunPythonaScript(string url, string fileType)
         {
             try
@@ -60,6 +43,33 @@ namespace YoutubeMp3V3
             {
                 MessageBox.Show($"An error occurred: {ex.Message}");
             }
+
+        }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            string url = rjTextBox1.Texts;
+            if (string.IsNullOrEmpty(url))
+            {
+                MessageBox.Show("Lutfen Gecerli Bir Link Giriniz Veya Bir Dosya Turu Seciniz");
+                return;
+            }
+            RunPythonaScript(url,"mp3");
+        }
+
+        private void rjButton2_Click(object sender, EventArgs e)
+        {
+            string url = rjTextBox1.Texts;
+            if (string.IsNullOrEmpty(url))
+            {
+                MessageBox.Show("Lutfen Gecerli Bir Link Giriniz Veya Bir Dosya Turu Seciniz");
+                return;
+            }
+            RunPythonaScript(url,"mp4");
+        }
+
+        private void rjTextBox1__TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

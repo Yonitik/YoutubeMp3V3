@@ -28,57 +28,92 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            comboBox1 = new ComboBox();
-            button1 = new Button();
+            rjButton1 = new CustomControls.RJControls.RJButton();
+            rjButton2 = new CustomControls.RJControls.RJButton();
+            rjTextBox1 = new CustomControls.RJControls.RJTextBox();
             SuspendLayout();
             // 
-            // textBox1
+            // rjButton1
             // 
-            textBox1.Location = new Point(48, 22);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(553, 23);
-            textBox1.TabIndex = 0;
-            textBox1.TextChanged += textBox1_TextChanged;
+            rjButton1.BackColor = Color.RoyalBlue;
+            rjButton1.BackgroundColor = Color.RoyalBlue;
+            rjButton1.BorderColor = Color.PaleVioletRed;
+            rjButton1.BorderRadius = 15;
+            rjButton1.BorderSize = 0;
+            rjButton1.FlatAppearance.BorderSize = 0;
+            rjButton1.FlatStyle = FlatStyle.Flat;
+            rjButton1.Font = new Font("Calibri", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            rjButton1.ForeColor = Color.White;
+            rjButton1.Location = new Point(80, 51);
+            rjButton1.Name = "rjButton1";
+            rjButton1.Size = new Size(150, 40);
+            rjButton1.TabIndex = 3;
+            rjButton1.Text = "Download Mp3";
+            rjButton1.TextColor = Color.White;
+            rjButton1.UseVisualStyleBackColor = false;
+            rjButton1.Click += rjButton1_Click;
             // 
-            // comboBox1
+            // rjButton2
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "MP3", "MP4" });
-            comboBox1.Location = new Point(226, 51);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 1;
+            rjButton2.BackColor = Color.RoyalBlue;
+            rjButton2.BackgroundColor = Color.RoyalBlue;
+            rjButton2.BorderColor = Color.PaleVioletRed;
+            rjButton2.BorderRadius = 15;
+            rjButton2.BorderSize = 0;
+            rjButton2.FlatAppearance.BorderSize = 0;
+            rjButton2.FlatStyle = FlatStyle.Flat;
+            rjButton2.Font = new Font("Calibri", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            rjButton2.ForeColor = Color.White;
+            rjButton2.Location = new Point(266, 51);
+            rjButton2.Name = "rjButton2";
+            rjButton2.Size = new Size(150, 40);
+            rjButton2.TabIndex = 4;
+            rjButton2.Text = "Download Mp4";
+            rjButton2.TextColor = Color.White;
+            rjButton2.UseVisualStyleBackColor = false;
+            rjButton2.Click += rjButton2_Click;
             // 
-            // button1
+            // rjTextBox1
             // 
-            button1.Location = new Point(226, 80);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 2;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            rjTextBox1.BackColor = SystemColors.Window;
+            rjTextBox1.BorderColor = Color.RoyalBlue;
+            rjTextBox1.BorderFocusColor = Color.HotPink;
+            rjTextBox1.BorderRadius = 15;
+            rjTextBox1.BorderSize = 2;
+            rjTextBox1.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            rjTextBox1.ForeColor = Color.FromArgb(64, 64, 64);
+            rjTextBox1.Location = new Point(13, 13);
+            rjTextBox1.Margin = new Padding(4);
+            rjTextBox1.Multiline = false;
+            rjTextBox1.Name = "rjTextBox1";
+            rjTextBox1.Padding = new Padding(10, 7, 10, 7);
+            rjTextBox1.PasswordChar = false;
+            rjTextBox1.PlaceholderColor = Color.DarkGray;
+            rjTextBox1.PlaceholderText = "";
+            rjTextBox1.Size = new Size(470, 34);
+            rjTextBox1.TabIndex = 5;
+            rjTextBox1.Texts = "";
+            rjTextBox1.UnderlinedStyle = false;
+            rjTextBox1._TextChanged += rjTextBox1__TextChanged;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(640, 181);
-            Controls.Add(button1);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox1);
+            BackgroundImageLayout = ImageLayout.None;
+            ClientSize = new Size(494, 105);
+            Controls.Add(rjTextBox1);
+            Controls.Add(rjButton2);
+            Controls.Add(rjButton1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "YoutubeMp3V3";
             Load += Form1_Load;
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private TextBox textBox1;
-        private ComboBox comboBox1;
-        private Button button1;
+        private CustomControls.RJControls.RJButton rjButton1;
+        private CustomControls.RJControls.RJButton rjButton2;
+        private CustomControls.RJControls.RJTextBox rjTextBox1;
     }
 }
